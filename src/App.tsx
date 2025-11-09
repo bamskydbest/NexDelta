@@ -136,57 +136,58 @@ export default function App() {
           <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 auto-rows-fr">
-            {[
-              {
-                title: "Telecom & Connectivity",
-                desc: "K-NET: national Internet, satellite, and fiber backbone.",
-                logo: "/k-NET.png",
-                link: "https://knetgh.com",
-              },
-              {
-                title: "Broadcast & Media",
-                desc: "WAPS: nationwide digital TV and radio distribution platforms.",
-                logo: "/waps.png",
-                link: "https://wapsgh.com",
-              },
-              {
-                title: "Fintech & Digital Banking",
-                desc: "SwiftRoute: secure payment systems, mobile banking, and interoperability infrastructure.",
-                logo: "/SwiftRoute-logo.png",
-                link: "https://swiftroutegh.com",
-              },
-              {
-                title: "Event Production & Studios",
-                desc: "Silicon House Productions: professional studios, OB vans, and large-scale live production support for broadcasters on the K-NET platform.",
-                logo: "/siliconhouse.png",
-                link: "https://siliconhousegh.com",
-              },
-            ].map((card, i) => (
-              <motion.a
-                key={i}
-                href={card.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-                className="group bg-light shadow-lg rounded-2xl p-3 border-t-4 border-secondary text-primary cursor-pointer hover:bg-accent flex flex-col items-start min-h-[280px] w-full lg:min-w-[260px]"
-              >
-                <img
-                  src={card.logo}
-                  alt={card.title}
-                  className="w-36 h-36 md:w-36 md:h-36 object-contain mb-2"
-                />
+  {[
+    {
+      title: "Telecom & Connectivity",
+      desc: "K-NET: national Internet, satellite, and fiber backbone.",
+      logo: "/k-NET.png",
+      link: "https://knetgh.com",
+    },
+    {
+      title: "Broadcast & Media",
+      desc: "WAPS: nationwide digital TV and radio distribution platforms.",
+      logo: "/waps.png",
+      link: "https://wapsgh.com",
+    },
+    {
+      title: "Fintech & Digital Banking",
+      desc: "SwiftRoute: secure payment systems, mobile banking, and interoperability infrastructure.",
+      logo: "/SwiftRoute-logo.png",
+      link: "https://swiftroutegh.com",
+    },
+    {
+      title: "Event Production & Studios",
+      desc: "Silicon House Productions: professional studios, OB vans, and large-scale live production support for broadcasters on the K-NET platform.",
+      logo: "/siliconhouse.png",
+      link: "https://siliconhousegh.com",
+    },
+  ].map((card, i) => (
+    <motion.a
+      key={i}
+      href={card.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      className="group bg-light shadow-lg rounded-2xl px-4 pt-2 pb-3 border-t-4 border-secondary text-primary cursor-pointer hover:bg-accent flex flex-col items-start min-h-[280px] w-full lg:min-w-[260px]"
+    >
+      <img
+        src={card.logo}
+        alt={card.title}
+        className="w-32 h-32 md:w-32 md:h-32 object-contain mb-1 mt-1"
+      />
 
-                <h3 className="text-lg font-bold mb-1 group-hover:text-white whitespace-nowrap overflow-ellipsis overflow-hidden">
-                  {card.title}
-                </h3>
+      <h3 className="text-lg font-bold mb-1 group-hover:text-white whitespace-nowrap overflow-ellipsis overflow-hidden">
+        {card.title}
+      </h3>
 
-                <p className="group-hover:text-white text-left text-sm">
-                  {card.desc}
-                </p>
-              </motion.a>
-            ))}
-          </div>
+      <p className="group-hover:text-white text-left text-sm">
+        {card.desc}
+      </p>
+    </motion.a>
+  ))}
+</div>
+
         </div>
       </section>
 

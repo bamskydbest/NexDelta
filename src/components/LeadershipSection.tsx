@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const leadershipTeam = [
-  {
-    name: "Richard Jake Hlomador",
-    title: "COO",
-    photo: "/adolph.jpg",
-    link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/",
-  },
-  {
-    name: "Adolph Kpesese",
-    title: "CTO",
-    photo: "/richard-jake.jpg" ,
-    link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/",
-  },
-];
+// const leadershipTeam = [
+//   {
+//     name: "Richard Jake Hlomador",
+//     title: "COO",
+//     photo: "/adolph.jpg",
+//     link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/",
+//   },
+//   {
+//     name: "Adolph Kpesese",
+//     title: "CTO",
+//     photo: "/richard-jake.jpg" ,
+//     link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/",
+//   },
+// ];
 
 export default function LeadershipSection() {
   const [showChairmanInfo, setShowChairmanInfo] = useState(false);
@@ -142,7 +142,9 @@ export default function LeadershipSection() {
 {/* Executive Chairman Profile Card */}
 <div className="flex justify-center mb-12">
   <motion.a
-    href="#"
+    href="https://www.linkedin.com/in/richard-hlomador-641516a/"
+    target="_blank"
+    rel="noopener noreferrer"
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
     className="bg-light text-accent rounded-2xl shadow-lg p-8 flex flex-col items-center text-center w-full sm:w-[45%] md:w-[40%] lg:w-[35%] max-w-[385px] hover:bg-secondary hover:text-white transition-colors duration-300"
@@ -159,7 +161,20 @@ export default function LeadershipSection() {
 
 {/* COO & CTO Cards */}
 <div className="flex flex-wrap justify-center gap-x-6 gap-y-8">
-  {leadershipTeam.map((leader, i) => (
+  {[
+    {
+      name: "Richard Jake Hlomador",
+      title: "COO",
+      photo: "/adolph.jpg",
+      link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/"
+    },
+    {
+      name: "Adolph Kpesese",
+      title: "CTO",
+      photo: "/richard-jake.jpg",
+      link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/"
+    }
+  ].map((leader, i) => (
     <motion.a
       key={i}
       href={leader.link}
@@ -179,6 +194,7 @@ export default function LeadershipSection() {
     </motion.a>
   ))}
 </div>
+
 
 
       </div>
