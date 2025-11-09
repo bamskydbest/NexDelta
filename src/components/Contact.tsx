@@ -18,7 +18,6 @@ const Contact = () => {
       content: (
         <>
           Front Desk: +233 302 769 306 <br />
-          Sales: +233 302 769 445
         </>
       ),
     },
