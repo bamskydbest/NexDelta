@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
+import LeadershipSection from "./components/LeadershipSection";
 
 export default function App() {
   const [displayText, setDisplayText] = useState("");
@@ -189,89 +190,7 @@ export default function App() {
         </div>
       </section>
 
-     {/* LEADERSHIP SECTION */}
-<section
-  id="leadership"
-  className="bg-accent text-white py-12 px-6 scroll-mt-20"
->
-  <div className="max-w-7xl mx-auto text-center">
-    <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-3xl md:text-5xl font-bold text-white mb-2"
-    >
-      Our Leadership
-    </motion.h2>
-
-    <div className="w-16 h-1 bg-secondary mx-auto mb-8 rounded-full"></div>
-
-    {/* Executive Chairman */}
-    <motion.a
-      href="https://www.linkedin.com/in/richard-hlomador-641516a/"
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-      className="bg-light text-primary rounded-2xl shadow-lg p-8 flex flex-col items-center text-center mx-auto mb-12 max-w-[420px] hover:bg-secondary hover:text-white transition-colors duration-300"
-    >
-      <img
-        src="/leaders/richard-k.jpg"
-        alt="Richard K. Hlomador"
-        className="w-40 h-40 rounded-full object-cover mb-4"
-      />
-      <h3 className="text-2xl font-bold mb-1">Richard K. Hlomador</h3>
-      <p className="text-gray-700 group-hover:text-white">Executive Chairman</p>
-    </motion.a>
-
-    <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-2xl md:text-4xl font-bold text-white mb-2"
-    >
-      Management Team
-    </motion.h2>
-
-    <div className="w-16 h-1 bg-secondary mx-auto mb-8 rounded-full"></div>
-
-    {/* Management Team */}
-    <div className="flex flex-wrap justify-center gap-x-6 gap-y-8">
-      {[
-        {
-          name: "Richard Jake Hlomador",
-          title: "COO",
-          photo: "/leaders/richard-jake.jpg",
-          link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/",
-        },
-        {
-          name: "Adolph Kpesese",
-          title: "CTO",
-          photo: "/leaders/adolph.jpg",
-          link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/",
-        },
-      ].map((leader, i) => (
-        <motion.a
-          key={i}
-          href={leader.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
-          className="bg-light text-primary rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:bg-secondary hover:text-white transition-colors duration-300 w-full sm:w-[45%] md:w-[40%] lg:w-[35%] max-w-[385px]"
-        >
-          <img
-            src={leader.photo}
-            alt={leader.name}
-            className="w-32 h-32 rounded-full object-cover mb-4"
-          />
-          <h3 className="text-xl font-bold mb-1">{leader.name}</h3>
-          <p className="text-gray-700 group-hover:text-white">{leader.title}</p>
-        </motion.a>
-      ))}
-    </div>
-  </div>
-</section>
+     <LeadershipSection/>
 
 
 
