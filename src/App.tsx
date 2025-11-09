@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
 
 export default function App() {
   const [displayText, setDisplayText] = useState("");
@@ -31,7 +32,7 @@ export default function App() {
   {/* Background Image with heartbeat animation */}
   <motion.div
     className="absolute inset-0 bg-cover bg-center z-0"
-    style={{ backgroundImage: "url('/africa.jpg')" }}
+    style={{ backgroundImage: "url('/afr.jpg')" }}
     animate={{
       scale: [1, 1.02, 1],
       opacity: [1, 0.98, 1],
@@ -156,8 +157,13 @@ export default function App() {
           transition={{ duration: 0.3 }}
           className="group bg-light shadow-lg rounded-2xl p-6 border-t-4 border-secondary text-primary cursor-pointer hover:bg-accent flex flex-col items-start min-h-[320px] w-full lg:min-w-[280px]"
         >
-          {/* Logo */}
-          <img src={card.logo} alt={card.title} className="w-24 h-24 object-contain mb-4" />
+         {/* Logo */}
+<img 
+  src={card.logo} 
+  alt={card.title} 
+  className="w-40 h-40 md:w-40 md:h-40 object-contain mb-4" 
+/>
+
 
           {/* Title */}
           <h3 className="text-xl font-bold mb-2 group-hover:text-white whitespace-nowrap overflow-ellipsis overflow-hidden">
@@ -179,7 +185,7 @@ export default function App() {
 
 
 
-     {/* LEADERSHIP SECTION */}
+   {/*{/* LEADERSHIP SECTION */}
 <section
   id="leadership"
   className="bg-accent text-white py-12 px-6 scroll-mt-20"
@@ -198,10 +204,35 @@ export default function App() {
     {/* Small underline */}
     <div className="w-16 h-1 bg-secondary mx-auto mb-8 rounded-full"></div>
 
-    {/* Leadership Cards */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    {/* Chairman Card (30% larger) */}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      className="bg-light text-primary rounded-2xl shadow-lg p-8 flex flex-col items-center text-center mx-auto mb-12 max-w-[420px] hover:bg-secondary hover:text-white transition-colors duration-300"
+    >
+      <img
+        src="/leaders/richard-k.jpg"
+        alt="Richard K. Hlomador"
+        className="w-40 h-40 rounded-full object-cover mb-4"
+      />
+      <h3 className="text-2xl font-bold mb-1">Richard K. Hlomador</h3>
+      <p className="text-gray-700 group-hover:text-white">Executive Chairman</p>
+    </motion.div>
+
+    {/* Management Subsection */}
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="text-2xl md:text-4xl font-bold text-white mb-2"
+    >
+      Management Team
+    </motion.h2>
+
+    <div className="w-16 h-1 bg-secondary mx-auto mb-8 rounded-full"></div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {[
-        { name: "Richard K. Hlomador", title: "Executive Chairman", photo: "/leaders/richard-k.jpg" },
         { name: "Richard Jake Hlomador", title: "COO", photo: "/leaders/richard-jake.jpg" },
         { name: "Adolph Kpesese", title: "CTO", photo: "/leaders/adolph.jpg" },
         { name: "Eric Sekyi", title: "CFO", photo: "/leaders/eric.jpg" },
@@ -210,26 +241,23 @@ export default function App() {
           key={i}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
-          className="bg-light text-primary rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
+          className="bg-light text-primary rounded-2xl shadow-lg p-6 flex flex-col items-center text-center hover:bg-secondary hover:text-white transition-colors duration-300"
         >
-          {/* Photo */}
           <img
             src={leader.photo}
             alt={leader.name}
             className="w-28 h-28 rounded-full object-cover mb-4"
           />
-
-          {/* Name */}
           <h3 className="text-xl font-bold mb-1">{leader.name}</h3>
-
-          {/* Title */}
-          <p className="text-gray-700">{leader.title}</p>
+          <p className="text-gray-700 group-hover:text-white">{leader.title}</p>
         </motion.div>
       ))}
     </div>
   </div>
 </section>
 
+
+<Contact/>
 
    {/* FOOTER */}
 <footer className="bg-primary text-gray-200 py-6">
