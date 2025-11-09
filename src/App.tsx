@@ -231,14 +231,14 @@ export default function App() {
 </section>
 
 
-    {/* FOOTER */}
+   {/* FOOTER */}
 <footer className="bg-primary text-gray-200 py-6">
   <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
     {/* Logo aligned to the left */}
     <img
       src="/logo.png"
       alt="Next Delta Logo"
-      className="w-36 md:w-44 object-contain"
+      className="w-42 md:w-50 object-contain" // increased by 15%
     />
 
     {/* Copyright text aligned to the right */}
@@ -247,6 +247,7 @@ export default function App() {
     </p>
   </div>
 </footer>
+
 
 
 

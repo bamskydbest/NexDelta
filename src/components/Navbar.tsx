@@ -27,54 +27,49 @@ const Navbar = () => {
         scrolled ? "shadow-md" : ""
       } bg-white`}
     >
-     {/* Logo Row */}
-<div className="max-w-6xl mx-auto flex justify-start items-center px-6 py-1"> 
-  {/* Reduced vertical padding from py-2 → py-1 */}
-  <img
-    src="/logo.png"
-    alt="Next Delta Capital Group"
-    className="w-40 md:w-50 object-contain"
-  />
-</div>
+      {/* Logo Row (Desktop unchanged, Mobile flex justify-between) */}
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-1">
+        <img
+          src="/logo.png"
+          alt="Next Delta Capital Group"
+          className="w-40 md:w-50 object-contain"
+        />
 
-{/* Desktop Nav List */}
-<div className="max-w-6xl mx-auto px-6 -mt-1"> 
-  {/* Added negative margin -mt-1 to pull navlist closer to logo */}
-  <ul className="hidden md:flex gap-12 mb-2 text-accent text-base md:text-lg font-semibold">
-    {navItems.map((item) => (
-      <li key={item.id}>
-        <Link
-          to={item.id}
-          smooth
-          offset={-80}
-          duration={600}
-          className="cursor-pointer hover:text-primary transition-colors"
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden text-primary text-3xl"
+          onClick={() => setOpen(!open)}
         >
-          {item.label}
-        </Link>
-      </li>
-    ))}
-  </ul>
+          {open ? "✕" : "☰"}
+        </button>
+      </div>
 
+      {/* Desktop Nav List (unchanged) */}
+      <div className="max-w-6xl mx-auto px-6 -mt-1">
+        <ul className="hidden md:flex gap-12 mb-2 text-accent text-base md:text-lg font-semibold">
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <Link
+                to={item.id}
+                smooth
+                offset={-80}
+                duration={600}
+                className="cursor-pointer hover:text-primary transition-colors"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex justify-start py-2">
-          <button
-            className="text-primary text-3xl"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? "✕" : "☰"}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
+        {/* Mobile Dropdown */}
         {open && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
-            className="bg-primary md:hidden"
+            className="md:hidden bg-white shadow-md"
           >
-            <ul className="flex flex-col items-start py-4 pl-6 space-y-4 text-white text-lg">
+            <ul className="flex flex-col items-start py-4 pl-6 space-y-4 text-black text-lg">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <Link
@@ -82,7 +77,7 @@ const Navbar = () => {
                     smooth
                     offset={-80}
                     duration={600}
-                    className="cursor-pointer hover:text-accent transition-colors"
+                    className="cursor-pointer hover:text-primary transition-colors"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}
