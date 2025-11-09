@@ -122,74 +122,81 @@ export default function App() {
       </section>
 
       {/* ECOSYSTEM SECTION */}
-      <section id="ecosystem" className="bg-white py-8 px-6 mt-4 scroll-mt-20">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-bold text-primary text-center mb-2"
-          >
-            Our Integrated Ecosystem
-          </motion.h2>
-
-          <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 auto-rows-fr">
-  {[
-    {
-      title: "Telecom & Connectivity",
-      desc: "K-NET: national Internet, satellite, and fiber backbone.",
-      logo: "/k-NET.png",
-      link: "https://knetgh.com",
-    },
-    {
-      title: "Broadcast & Media",
-      desc: "WAPS: nationwide digital TV and radio distribution platforms.",
-      logo: "/waps.png",
-      link: "https://wapsgh.com",
-    },
-    {
-      title: "Fintech & Digital Banking",
-      desc: "SwiftRoute: secure payment systems, mobile banking, and interoperability infrastructure.",
-      logo: "/SwiftRoute-logo.png",
-      link: "https://swiftroutegh.com",
-    },
-    {
-      title: "Event Production & Studios",
-      desc: "Silicon House Productions: professional studios, OB vans, and large-scale live production support for broadcasters on the K-NET platform.",
-      logo: "/siliconhouse.png",
-      link: "https://siliconhousegh.com",
-    },
-  ].map((card, i) => (
-    <motion.a
-      key={i}
-      href={card.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.3 }}
-      className="group bg-light shadow-lg rounded-2xl px-4 pt-2 pb-3 border-t-4 border-secondary text-primary cursor-pointer hover:bg-accent flex flex-col items-start min-h-[280px] w-full lg:min-w-[260px]"
+    <section id="ecosystem" className="bg-white py-8 px-6 mt-4 scroll-mt-20">
+  <div className="max-w-7xl mx-auto">
+    <motion.h2
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="text-3xl md:text-5xl font-bold text-primary text-center mb-2"
     >
-      <img
-        src={card.logo}
-        alt={card.title}
-        className="w-32 h-32 md:w-32 md:h-32 object-contain mb-1 mt-1"
-      />
+      Our Integrated Ecosystem
+    </motion.h2>
 
-      <h3 className="text-lg font-bold mb-1 group-hover:text-white whitespace-nowrap overflow-ellipsis overflow-hidden">
-        {card.title}
-      </h3>
+    <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
 
-      <p className="group-hover:text-white text-left text-sm">
-        {card.desc}
-      </p>
-    </motion.a>
-  ))}
-</div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 auto-rows-fr">
+      {[
+        {
+          title: "Telecom & Connectivity",
+          desc: "K-NET: is a leading telecommunications infrastructure provider delivering national Internet, satellite, and fibre backbone services across Ghana and beyond.",
+          logo: "/k-NET.png",
+          link: "https://knetgh.com",
+        },
+        {
+          title: "Broadcast & Media",
+          desc: "WAPS: operates Ghana’s nationwide digital television and radio distribution platforms, powering the country’s broadcast ecosystem with reliable, high-capacity content delivery solutions.",
+          logo: "/waps.png",
+          link: "https://wapsgh.com",
+        },
+        {
+          title: "Fintech & Digital Banking",
+          desc: "SwiftRoute : provides secure payment systems, mobile banking solutions, and interoperability infrastructure that drive financial inclusion and enable seamless digital transactions across Africa’s fintech landscape.",
+          logo: "/SwiftRoute-logo.png",
+          link: "https://swiftroutegh.com",
+        },
+        {
+          title: "Event Production & Studios",
+          desc: "Silicon House Productions: professional studios, OB vans, and large-scale live production support for broadcasters on the K-NET platform.",
+          logo: "/siliconhouse.png",
+          link: "https://siliconhousegh.com",
+        },
+      ].map((card, i) => (
+        <motion.a
+          key={i}
+          href={card.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
+          className="group bg-light text-primary shadow-lg rounded-2xl px-4 py-2 border-t-4 border-secondary cursor-pointer flex flex-col justify-start items-center min-h-[120px] w-full lg:min-w-[260px] hover:bg-accent hover:text-white transition-colors duration-300"
+        >
+          {/* Heading */}
+          <h3 className="text-lg font-bold mb-1 group-hover:text-white overflow-hidden text-center">
+            {card.title}
+          </h3>
 
-        </div>
-      </section>
+          {/* Description */}
+          <p className="text-sm mb-2 group-hover:text-white text-center">
+            {card.desc}
+          </p>
+
+          {/* Logo pushed down a bit using margin-top auto */}
+          <img
+            src={card.logo}
+            alt={card.title}
+            className="w-44 h-44 object-contain mt-auto"
+          />
+        </motion.a>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
      <LeadershipSection/>
 
