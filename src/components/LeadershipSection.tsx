@@ -117,13 +117,13 @@ export default function LeadershipSection() {
   <p className="text-lg md:text-xl max-w-4xl mx-auto text-left">
     At Next Delta Capital, we are guided by one conviction: Africa must own its digital destiny.
     <br />
-    Our mission is to build, invest, and accelerate enterprises that transform connectivity, commerce, and community across the continent.
+    Our mission is to build, invest, and accelerate enterprises that transform connectivity, commerce, and community across the continent. <br />
     <br />
-    Over my four-decade journey in engineering, telecommunications, and infrastructure development, I have seen how technology can redefine possibility. From building Ghana’s national satellite networks to advancing renewable power and digital finance systems, each success reinforced a simple truth — that when Africans innovate locally, they create value that endures globally.
+    Over my four-decade journey in engineering, telecommunications, and infrastructure development, I have seen how technology can redefine possibility. From building Ghana’s national satellite networks to advancing renewable power and digital finance systems, each success reinforced a simple truth — that when Africans innovate locally, they create value that endures globally. <br />
     <br />
-    Next Delta Capital stands at the intersection of technology and transformation. We invest not merely in ideas, but in ecosystems — uniting the best of engineering, finance, and governance to drive sustainable growth. Every venture we support reflects our belief in discipline, integrity, and purpose-driven innovation.
+    Next Delta Capital stands at the intersection of technology and transformation. We invest not merely in ideas, but in ecosystems — uniting the best of engineering, finance, and governance to drive sustainable growth. Every venture we support reflects our belief in discipline, integrity, and purpose-driven innovation. <br />
     <br />
-    Our goal is not just to fund progress but to engineer it — to help build a resilient digital Africa capable of competing on the world stage. Together with our partners, we are shaping a new generation of enterprises that deliver measurable impact, unlock inclusive opportunity, and strengthen Africa’s position in the global economy.
+    Our goal is not just to fund progress but to engineer it — to help build a resilient digital Africa capable of competing on the world stage. Together with our partners, we are shaping a new generation of enterprises that deliver measurable impact, unlock inclusive opportunity, and strengthen Africa’s position in the global economy. <br />
     <br />
     <span className="font-bold">{`Richard Hlomador`}</span><br />
     Executive Chairman, Next Delta Capital
@@ -159,21 +159,22 @@ export default function LeadershipSection() {
   </motion.a>
 </div>
 
-{/* COO & CTO Cards */}
 <div className="flex flex-wrap justify-center gap-x-6 gap-y-8">
   {[
     {
       name: "Richard Jake Hlomador",
       title: "COO",
       photo: "/adolph.jpg",
-      link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/"
+      link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/",
+      flip: true, 
     },
     {
       name: "Adolph Kpesese",
       title: "CTO",
       photo: "/richard-jake.jpg",
-      link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/"
-    }
+      link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/",
+      flip: false,
+    },
   ].map((leader, i) => (
     <motion.a
       key={i}
@@ -187,13 +188,14 @@ export default function LeadershipSection() {
       <img
         src={leader.photo}
         alt={leader.name}
-        className="w-32 h-32 rounded-full object-cover mb-4"
+        className={`w-32 h-32 rounded-full object-cover mb-4 ${leader.flip ? "scale-x-[-1]" : ""}`}
       />
       <h3 className="text-xl font-bold mb-1">{leader.name}</h3>
       <p className="text-gray-700 group-hover:text-white">{leader.title}</p>
     </motion.a>
   ))}
 </div>
+
 
 
 

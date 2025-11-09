@@ -43,32 +43,34 @@ export default function App() {
   className="relative flex flex-col justify-center items-center px-6 md:px-20 py-[15rem] md:py-[18rem] text-center overflow-hidden"
 >
   {/* Background Image Slideshow */}
-  <div className="absolute inset-0 z-0">
-    {backgroundImages.map((img, index) => (
-      <motion.div
-        key={index}
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${img})` }}
-        animate={{
-          opacity: currentIndex === index ? 1 : 0,
-          scale: currentIndex === index ? 1.02 : 1,
-        }}
-        transition={{
-          duration: 2,
-          ease: "easeInOut",
-        }}
-      />
-    ))}
-  </div>
+<div className="absolute inset-0 z-0">
+  {backgroundImages.map((img, index) => (
+    <motion.div
+      key={index}
+      className="absolute inset-0 bg-cover bg-center"
+      style={{ backgroundImage: `url(${img})` }}
+      animate={{
+        opacity: currentIndex === index ? 1 : 0,
+        scale: currentIndex === index ? 1.02 : 1,
+      }}
+      transition={{
+        duration: 2,
+        ease: "easeInOut",
+      }}
+    />
+  ))}
 
-  {/* Hero Text */}
-<div className="relative z-10 max-w-full text-primary">
+  {/* 🔥 Overlay added here */}
+  <div className="absolute inset-0 bg-black/50 z-[1]" />
+</div>
+
+{/* Hero Text */}
+<div className="relative z-10 max-w-full text-white text-center">
   <motion.h1
     initial={{ opacity: 0, x: -30 }}
     animate={{ opacity: 1, x: 0 }}
     transition={{ duration: 1 }}
-    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-2 leading-tight whitespace-nowrap"
-    style={{ wordBreak: "keep-all" }}
+    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-2 leading-tight"
   >
     {displayText}
     {displayText.length < fullText.length && (
@@ -87,11 +89,12 @@ export default function App() {
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 1.5, duration: 1 }}
-    className="text-lg md:text-2xl lg:text-3xl xl:text-4xl font-medium text-primary"
+    className="text-lg md:text-2xl lg:text-3xl xl:text-4xl font-medium"
   >
     Empowering Africa’s Digital Future
   </motion.p>
 </div>
+
 
 </section>
 
@@ -122,42 +125,44 @@ export default function App() {
       </section>
 
       {/* ECOSYSTEM SECTION */}
-    <section id="ecosystem" className="bg-white py-8 px-6 mt-4 scroll-mt-20">
+<section id="ecosystem" className="bg-white py-6 px-4 scroll-mt-20">
   <div className="max-w-7xl mx-auto">
+    {/* Header */}
     <motion.h2
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-3xl md:text-5xl font-bold text-primary text-center mb-2"
+      transition={{ duration: 0.5 }}
+      className="text-2xl md:text-4xl font-bold text-primary text-center mb-2"
     >
       Our Integrated Ecosystem
     </motion.h2>
 
-    <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
+    <div className="w-16 h-1 bg-secondary mx-auto mb-4 rounded-full"></div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 auto-rows-fr">
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 auto-rows-fr">
       {[
         {
           title: "Telecom & Connectivity",
-          desc: "K-NET: is a leading telecommunications infrastructure provider delivering national Internet, satellite, and fibre backbone services across Ghana and beyond.",
+          desc: "K-NET delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
           logo: "/k-NET.png",
           link: "https://knetgh.com",
         },
         {
           title: "Broadcast & Media",
-          desc: "WAPS: operates Ghana’s nationwide digital television and radio distribution platforms, powering the country’s broadcast ecosystem with reliable, high-capacity content delivery solutions.",
+          desc: "WAPS powers Ghana’s digital TV and radio distribution platforms with reliable content delivery.",
           logo: "/waps.png",
           link: "https://wapsgh.com",
         },
         {
           title: "Fintech & Digital Banking",
-          desc: "SwiftRoute : provides secure payment systems, mobile banking solutions, and interoperability infrastructure that drive financial inclusion and enable seamless digital transactions across Africa’s fintech landscape.",
+          desc: "SwiftRoute provides secure payment systems and interoperability infrastructure for digital finance.",
           logo: "/SwiftRoute-logo.png",
           link: "https://swiftroutegh.com",
         },
         {
-          title: "Event Production & Studios",
-          desc: "Silicon House Productions: professional studios, OB vans, and large-scale live production support for broadcasters on the K-NET platform.",
+          title: "Event , Broadcast & Studio Production",
+          desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
           logo: "/siliconhouse.png",
           link: "https://siliconhousegh.com",
         },
@@ -167,31 +172,32 @@ export default function App() {
           href={card.link}
           target="_blank"
           rel="noopener noreferrer"
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.04 }}
           transition={{ duration: 0.3 }}
-          className="group bg-light text-primary shadow-lg rounded-2xl px-4 py-2 border-t-4 border-secondary cursor-pointer flex flex-col justify-start items-center min-h-[120px] w-full lg:min-w-[260px] hover:bg-accent hover:text-white transition-colors duration-300"
+          className="group bg-light text-primary shadow-md rounded-xl p-4 border-t-4 border-secondary cursor-pointer flex flex-col items-center text-center hover:bg-accent hover:text-white transition-all duration-300 min-h-[220px]"
         >
-          {/* Heading */}
-          <h3 className="text-lg font-bold mb-1 group-hover:text-white overflow-hidden text-center">
+          {/* Title */}
+          <h3 className="text-base font-semibold mb-1 group-hover:text-white">
             {card.title}
           </h3>
 
           {/* Description */}
-          <p className="text-sm mb-2 group-hover:text-white text-center">
+          <p className="text-sm leading-snug  group-hover:text-white">
             {card.desc}
           </p>
 
-          {/* Logo pushed down a bit using margin-top auto */}
+          {/* Logo */}
           <img
             src={card.logo}
             alt={card.title}
-            className="w-44 h-44 object-contain mt-auto"
+            className="w-30 h-30 object-contain mt-auto"
           />
         </motion.a>
       ))}
     </div>
   </div>
 </section>
+
 
 
 
