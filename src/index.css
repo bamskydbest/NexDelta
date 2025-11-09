@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000000; /* Black — main text color */
+  --color-background: #EFEEEA; /* Light warm white */
+  --color-secondary: #FE7743; /* Vibrant orange accent */
+  --color-accent: #273F4F;  /* Deep slate for nav/footer */
+  --color-light: #FFFFFF; /* Pure white for contrast cards */
+}
