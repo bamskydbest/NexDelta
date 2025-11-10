@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 
 export default function Mainsite() {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Next Delta Capital Group";
+  const fullText = "Nex Delta Capital Group";
   const typingSpeed = 100; // ms per letter
 
   // Typewriter effect
@@ -114,7 +114,7 @@ export default function Mainsite() {
         <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
 
         <p className="leading-relaxed text-base md:text-lg text-gray-100 max-w-4xl mx-auto text-left">
-          Next Delta Capital Group is a Ghanaian investment and technology
+          Nex Delta Capital Group is a Ghanaian investment and technology
           holding company powering Africa’s digital transformation. We build
           and manage the backbone infrastructure that connects nations,
           delivers content, and enables financial inclusion.
@@ -210,11 +210,11 @@ export default function Mainsite() {
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <img
             src="/logo.png"
-            alt="Next Delta Logo"
+            alt="Nex Delta Logo"
             className="w-42 md:w-50 object-contain"
           />
           <p className="text-sm md:text-base">
-            © {new Date().getFullYear()} Next Delta Capital Group. All rights
+            © {new Date().getFullYear()} Nex Delta Capital Group. All rights
             reserved.
           </p>
         </div>

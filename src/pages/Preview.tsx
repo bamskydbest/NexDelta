@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const NextDeltaLogo = () => (
   <img
     src="/logo.png"
-    alt="Next Delta Capital Group Logo"
+    alt="Nex Delta Capital Group Logo"
     className="w-40 sm:w-50 md:w-58 object-contain"
   />
 );
@@ -35,15 +35,17 @@ const HeroCard: React.FC = () => {
             </h2>
 
             {/* Divider */}
-            <div className="border-b-4 border-secondary mb-6"></div>
+            <div className="border-b-1 border-secondary mb-6"></div>
 
             {/* Description */}
             <p className="text-sm sm:text-base leading-relaxed mb-8 text-gray-700 text-center sm:text-left">
-              <strong className="text-accent">Next Delta Capital Group</strong> is a Ghanaian
+              <strong className="text-accent">Nex Delta Capital Group</strong> is a Ghanaian
               investment and technology holding company powering Africa’s digital transformation.
               We build and manage the backbone infrastructure that connects nations, delivers content,
               and enables financial inclusion.
             </p>
+            {/* Divider */}
+            <div className="border-b-1 border-secondary mb-6"></div>
 
             {/* Services */}
             <div className="space-y-6">
@@ -77,7 +79,7 @@ const HeroCard: React.FC = () => {
               ].map((service, i) => (
                <div
   key={i}
-  className="flex flex-col sm:flex-row justify-between items-center gap-2 p-3 border-b-2 border-secondary last:border-b-0"
+  className="flex flex-col sm:flex-row justify-between items-center gap-2 p-3 border-b-[0.5px] border-secondary last:border-b-0"
 >
   <div className="flex-1 text-center sm:text-left max-w-[70%]">
     <h3 className="text-base font-bold text-accent">{service.title}</h3>
@@ -94,7 +96,7 @@ const HeroCard: React.FC = () => {
             </div>
 
             {/* Summary */}
-            <p className="text-xs text-center mt-6 pt-4 border-t-2 border-secondary text-gray-500 italic">
+            <p className="text-xs text-center mt-6 pt-4 border-t-1 border-secondary text-gray-500 italic">
               Together, these companies deliver end-to-end digital capability — from network
               to content to finance.
             </p>
@@ -114,7 +116,7 @@ const HeroCard: React.FC = () => {
               "Extend broadcast and OTT reach through regional collaboration.",
               "Integrate FinTech with telecom infrastructure to power digital government and enterprise payments.",
               "Support edge computing, cloud, and smart-network deployments for public and private sector clients.",
-              "Position Next Delta Capital Group as a catalyst for Africa's digital economy.",
+              "Position Nex Delta Capital Group as a catalyst for Africa's digital economy.",
             ].map((text, i) => (
               <li key={i} className="flex items-start">
                 <span className="mr-2 font-bold">•</span>
@@ -127,7 +129,7 @@ const HeroCard: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-6 sm:gap-4 mt-4 text-white">
             <div className="space-y-1 text-center sm:text-left">
               <p className="font-bold text-secondary">Richard Hlomador – Executive Chairman</p>
-              <p className="font-bold text-secondary">Next Delta Group</p>
+              <p className="font-bold text-secondary">Nex Delta Group</p>
               <p className="flex justify-center sm:justify-start items-center gap-2">
                 <FaEnvelope /> <span>rkh@knetgh.com</span>
               </p>
@@ -142,24 +144,27 @@ const HeroCard: React.FC = () => {
                   rel="noopener noreferrer"
                   className="underline"
                 >
-                  nextdeltacapital.com
+                  nexdeltacapital.com
                 </a>
               </p>
             </div>
           </div>
 
           {/* CTA Button */}
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => {
-                window.scrollTo(0, 0);
-                navigate("/main");
-              }}
-              className="px-8 py-3 bg-secondary text-white font-bold rounded-full shadow-md hover:bg-accent transition duration-300 text-base tracking-wide"
-            >
-              View Full Website
-            </button>
-          </div>
+         <div className="flex justify-center mt-6">
+  <button
+    onClick={() => {
+      window.scrollTo(0, 0);
+      navigate("/main");
+    }}
+    className="px-8 py-3 bg-secondary text-white font-bold rounded-full border-2 border-secondary 
+               hover:bg-transparent hover:text-secondary transition duration-300 text-base tracking-wide"
+  >
+    View Full Website
+  </button>
+</div>
+
+
         </div>
       </div>
     </div>
