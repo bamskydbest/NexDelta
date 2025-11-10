@@ -150,7 +150,7 @@ export default function LeadershipSection() {
     className="bg-light text-accent rounded-2xl shadow-lg p-8 flex flex-col items-center text-center w-full sm:w-[45%] md:w-[40%] lg:w-[35%] max-w-[385px] hover:bg-secondary hover:text-white transition-colors duration-300"
   >
     <img
-      src="/richard-k.jpg"
+      src="/chairman.jpg"
       alt="Richard Hlomador"
       className="w-40 h-40 rounded-full object-cover mb-4"
     />
