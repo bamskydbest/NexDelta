@@ -49,50 +49,64 @@ const HeroCard: React.FC = () => {
 
             {/* Services */}
             <div className="space-y-6">
-              {[
-                {
-                  title: "Telecom & Connectivity",
-                  desc: "K-NET delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
-                  logo: "/k-NET.png",
-                },
-                {
-                  title: "Broadcast & Media",
-                  desc: "WAPS powers Ghana’s digital TV and radio distribution with reliable content delivery.",
-                  logo: "/waps.png",
-                },
-                {
-                  title: "FinTech & Digital Banking",
-                  desc: "SwiftRoute provides secure payment systems and interoperability infrastructure for digital finance.",
-                  logo: "/SwiftRoute-logo.png",
-                },
-                {
-                      title: "Renewable Energy : Solar Power Solutions",
-          desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continous network uptime.",
-          logo: "/k-NET.png",
-          link: "https://knetgh.com",
-                },
-                {
-                  title: "Event, Broadcast & Studio Productions",
-                  desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
-                  logo: "/siliconhouse.png",
-                },
-              ].map((service, i) => (
-               <div
-  key={i}
-  className="flex flex-col sm:flex-row justify-between items-center gap-2 p-3 border-b-[0.5px] border-secondary last:border-b-0"
->
-  <div className="flex-1 text-center sm:text-left max-w-[70%]">
-    <h3 className="text-base font-bold text-accent">{service.title}</h3>
-    <p className="text-sm text-gray-600">{service.desc}</p>
-  </div>
-  <img
-    src={service.logo}
-    alt={service.title}
-    className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 max-w-[150px] max-h-[150px] object-contain flex-shrink-0"
-  />
-</div>
+             {[
+  {
+    title: "Telecom & Connectivity",
+    desc: "K-NET delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
+    logo: "/k-NET.png",
+    link: "https://knetgh.com",
+  },
+  {
+    title: "Broadcast & Media",
+    desc: "WAPS powers Ghana’s digital TV and radio distribution platforms with reliable content delivery.",
+    logo: "/waps.png",
+    link: "https://wapsgh.com",
+  },
+  {
+    title: "Fintech & Digital Banking",
+    desc: "SwiftRoute provides secure payment systems and interoperability infrastructure for digital finance.",
+    logo: "/SwiftRoute-logo.png",
+    link: "https://swiftroutegh.com",
+  },
+  {
+    title: "Renewable Energy : Solar Power Solutions",
+    desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
+    logo: "/k-NET.png",
+    link: "https://knetgh.com",
+  },
+  {
+    title: "Event, Broadcast & Studio Productions",
+    desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
+    logo: "/siliconhouse.png",
+    link: "https://siliconhousegh.com",
+  },
+].map((service, i) => (
+  <div
+    key={i}
+    className="flex flex-col sm:flex-row justify-between items-center gap-2 p-3 border-b-[0.5px] border-secondary last:border-b-0"
+  >
+    <div className="flex-1 text-center sm:text-left max-w-[70%]">
+      <h3 className="text-base font-bold text-accent">{service.title}</h3>
+      <p className="text-sm text-gray-600">{service.desc}</p>
+    </div>
 
-              ))}
+    {/*  logo clickable */}
+    <a
+      href={service.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-transform hover:scale-105"
+    >
+      <img
+        src={service.logo}
+        alt={service.title}
+        className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                   max-w-[150px] max-h-[150px] object-contain flex-shrink-0"
+      />
+    </a>
+  </div>
+))}
+
             </div>
 
             {/* Summary */}
