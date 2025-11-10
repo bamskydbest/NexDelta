@@ -159,7 +159,7 @@ export default function Mainsite() {
         },
       
         {
-          title: "Renewable Energy",
+          title: "Renewable Energy : Solar Power Solutions",
           desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continous network uptime.",
           logo: "/k-NET.png",
           link: "https://knetgh.com",
@@ -171,14 +171,14 @@ export default function Mainsite() {
           link: "https://siliconhousegh.com",
         },
       ].map((card, i) => (
-       <motion.a
+     <motion.a
   key={i}
   href={card.link}
   target="_blank"
   rel="noopener noreferrer"
   whileHover={{ scale: 1.04 }}
   transition={{ duration: 0.3 }}
-  className="group bg-light text-primary shadow-md rounded-xl p-2 border-t-4 border-secondary cursor-pointer flex flex-col items-center text-center hover:bg-accent hover:text-white transition-all duration-300 min-h-[140px]" 
+  className="group bg-light text-primary shadow-md rounded-xl p-2 border-2 border-secondary cursor-pointer flex flex-col items-center text-center hover:bg-accent hover:text-white transition-all duration-300 min-h-[140px]"
 >
   <h3 className="text-base font-semibold mb-0.5 group-hover:text-white">
     {card.title}
@@ -194,6 +194,8 @@ export default function Mainsite() {
     className="w-32 h-32 object-contain"
   />
 </motion.a>
+
+
       ))}
     </div>
   </div>
