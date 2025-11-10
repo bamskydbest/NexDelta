@@ -30,7 +30,7 @@ export default function LeadershipSection() {
         <div className="flex flex-col md:flex-row items-center md:items-start md:gap-12 mb-12">
           {/* Chairman Photo */}
           <motion.img
-            src="/richard-k.jpg"
+            src="/chairman.jpg"
             alt="Richard Hlomador"
             className="w-48 h-48 rounded-full object-cover mb-6 md:mb-0"
             initial={{ opacity: 0 }}
