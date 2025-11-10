@@ -157,45 +157,43 @@ export default function Mainsite() {
           logo: "/SwiftRoute-logo.png",
           link: "https://swiftroutegh.com",
         },
+      
         {
-          title: "Event, Broadcast & Studio Production",
+          title: "Renewable Energy",
+          desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continous network uptime.",
+          logo: "/k-NET.png",
+          link: "https://knetgh.com",
+        },
+          {
+          title: "Event, Broadcast & Studio Productions",
           desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
           logo: "/siliconhouse.png",
           link: "https://siliconhousegh.com",
         },
-        {
-          title: "Renewable Energy",
-          desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities.",
-          logo: "/k-NET.png", // ✅ reusing K-NET logo
-          link: "https://knetgh.com",
-        },
       ].map((card, i) => (
-        <motion.a
-          key={i}
-          href={card.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          whileHover={{ scale: 1.04 }}
-          transition={{ duration: 0.3 }}
-          className="group bg-light text-primary shadow-md rounded-xl p-4 border-t-4 border-secondary cursor-pointer flex flex-col items-center text-center hover:bg-accent hover:text-white transition-all duration-300 min-h-[220px]"
-        >
-          {/* Title */}
-          <h3 className="text-base font-semibold mb-1 group-hover:text-white">
-            {card.title}
-          </h3>
+       <motion.a
+  key={i}
+  href={card.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.04 }}
+  transition={{ duration: 0.3 }}
+  className="group bg-light text-primary shadow-md rounded-xl p-2 border-t-4 border-secondary cursor-pointer flex flex-col items-center text-center hover:bg-accent hover:text-white transition-all duration-300 min-h-[140px]" 
+>
+  <h3 className="text-base font-semibold mb-0.5 group-hover:text-white">
+    {card.title}
+  </h3>
 
-          {/* Description */}
-          <p className="text-sm leading-snug group-hover:text-white">
-            {card.desc}
-          </p>
+  <p className="text-sm leading-tight group-hover:text-white mt-2 mb-1">
+    {card.desc}
+  </p>
 
-          {/* Logo */}
-          <img
-            src={card.logo}
-            alt={card.title}
-            className="w-24 h-24 object-contain mt-auto"
-          />
-        </motion.a>
+  <img
+    src={card.logo}
+    alt={card.title}
+    className="w-32 h-32 object-contain"
+  />
+</motion.a>
       ))}
     </div>
   </div>

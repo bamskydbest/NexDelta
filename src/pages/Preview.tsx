@@ -7,18 +7,18 @@ const NextDeltaLogo = () => (
   <img
     src="/logo.png"
     alt="Next Delta Capital Group Logo"
-    className="w-32 sm:w-40 md:w-48 object-contain"
+    className="w-40 sm:w-50 md:w-58 object-contain"
   />
 );
 
 // ✅ Correct QR Code path
-const QRCode = () => (
-  <img
-    src="/qrcode_nextdeltacapital.com.png"
-    alt="QR Code"
-    className="w-20 sm:w-24 md:w-28 object-contain"
-  />
-);
+// const QRCode = () => (
+//   <img
+//     src="/qrcode_nextdeltacapital.com.png"
+//     alt="QR Code"
+//     className="w-20 sm:w-24 md:w-28 object-contain"
+//   />
+// );
 
 const HeroCard: React.FC = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const HeroCard: React.FC = () => {
             {/* Top: Logo + QR (Responsive layout) */}
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
               <NextDeltaLogo />
-              <QRCode />
+              {/* <QRCode /> */}
             </div>
 
             <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-center mb-4 text-accent">
@@ -72,6 +72,12 @@ const HeroCard: React.FC = () => {
                   logo: "/SwiftRoute-logo.png",
                 },
                 {
+                  title: "Renewable Energy",
+          desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continous network uptime.",
+          logo: "/k-NET.png",
+          link: "https://knetgh.com",
+                },
+                {
                   title: "Event, Broadcast & Studios Production",
                   desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
                   logo: "/siliconhouse.png",
@@ -88,7 +94,7 @@ const HeroCard: React.FC = () => {
                   <img
                     src={service.logo}
                     alt={service.title}
-                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                    className="w-24 h-24 sm:w-20 sm:h-20 object-contain"
                   />
                 </div>
               ))}
@@ -153,7 +159,7 @@ const HeroCard: React.FC = () => {
 
             {/* QR Code */}
             <div className="self-center sm:self-start">
-              <QRCode />
+              {/* <QRCode /> */}
             </div>
           </div>
 
