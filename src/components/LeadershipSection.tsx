@@ -152,7 +152,7 @@ export default function LeadershipSection() {
     <img
       src="/richard-k.jpg"
       alt="Richard Hlomador"
-      className="w-32 h-32 rounded-full object-cover mb-4"
+      className="w-40 h-40 rounded-full object-cover mb-4"
     />
     <h3 className="text-xl font-bold mb-1">Richard Hlomador</h3>
     <p className="text-gray-700">Executive Chairman</p>
@@ -188,7 +188,7 @@ export default function LeadershipSection() {
       <img
         src={leader.photo}
         alt={leader.name}
-        className={`w-32 h-32 rounded-full object-cover mb-4 ${leader.flip ? "scale-x-[-1]" : ""}`}
+        className={`w-40 h-40 rounded-full object-cover mb-4 ${leader.flip ? "scale-x-[-1]" : ""}`}
       />
       <h3 className="text-xl font-bold mb-1">{leader.name}</h3>
       <p className="text-gray-700 group-hover:text-white">{leader.title}</p>
