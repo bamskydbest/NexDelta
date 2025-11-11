@@ -209,11 +209,11 @@ export default function Mainsite() {
       <footer className="bg-primary text-gray-200 py-6">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           <img
-            src="/logo.png"
+            src="/logoo.png"
             alt="Next Delta Logo"
             className="w-42 md:w-50 object-contain"
           />
-          <p className="text-sm md:text-base">
+          <p className="text-sm md:text-base ml-4">
             © {new Date().getFullYear()} Next Delta Capital Group. All rights
             reserved.
           </p>

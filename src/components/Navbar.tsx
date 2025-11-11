@@ -29,9 +29,9 @@ const Navbar = () => {
       } bg-white`}
     >
       {/* Logo Row (Desktop unchanged, Mobile flex justify-between) */}
-      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-1">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-2">
         <img
-          src="/logo.png"
+          src="/logoo.png"
           alt="Next Delta Capital Group"
           className="w-40 md:w-50 object-contain"
         />
