@@ -49,7 +49,7 @@ export default function LeadershipSection() {
             >
               Africa’s next economic leap will be led by those who build, not by those who wait.
               <br />
-              At Nex Delta Capital, we invest in Africa’s power to create, connect, and compete globally.
+              At Next Delta Capital, we invest in Africa’s power to create, connect, and compete globally.
             </motion.p>
             <p className={`font-bold text-lg md:text-xl mb-4 text-right ${orangeColor}`}>
               — Richard Hlomador, Executive Chairman
@@ -77,7 +77,7 @@ export default function LeadershipSection() {
                   As Founder and Executive Chairman of K-NET Ghana Ltd, he has built some of the continent’s most advanced digital networks — from national Digital Terrestrial Television (DTT) systems to rural GSM, satellite teleports, and renewable power integration.
                 </p>
                 <p>
-                  Under his leadership, Nex Delta Capital Group oversees a strategic ecosystem of companies driving Africa’s digital future:
+                  Under his leadership, Next Delta Capital Group oversees a strategic ecosystem of companies driving Africa’s digital future:
                   <ul className="list-disc list-inside mt-2">
                     <li>K-NET</li>
                     <li>WAPS (West African Platform Services)</li>
@@ -101,7 +101,7 @@ export default function LeadershipSection() {
   {/* Small Underline */}
   <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
   <p className="text-lg md:text-xl max-w-4xl mx-auto text-left">
-    At Nex Delta Capital, our purpose is to drive Africa’s digital and financial transformation through intelligent investment and strategic partnerships.
+    At Next Delta Capital, our purpose is to drive Africa’s digital and financial transformation through intelligent investment and strategic partnerships.
     <br />
     We believe in a future where innovation, infrastructure, and impact converge — creating systems that empower nations, industries, and people.
   </p>
@@ -115,18 +115,18 @@ export default function LeadershipSection() {
   {/* Small Underline */}
   <div className="w-16 h-1 bg-secondary mx-auto mb-6 rounded-full"></div>
   <p className="text-lg md:text-xl max-w-4xl mx-auto text-left">
-    At Nex Delta Capital, we are guided by one conviction: Africa must own its digital destiny.
+    At Next Delta Capital, we are guided by one conviction: Africa must own its digital destiny.
     <br />
     Our mission is to build, invest, and accelerate enterprises that transform connectivity, commerce, and community across the continent. <br />
     <br />
     Over my four-decade journey in engineering, telecommunications, and infrastructure development, I have seen how technology can redefine possibility. From building Ghana’s national satellite networks to advancing renewable power and digital finance systems, each success reinforced a simple truth — that when Africans innovate locally, they create value that endures globally. <br />
     <br />
-    Nex Delta Capital stands at the intersection of technology and transformation. We invest not merely in ideas, but in ecosystems — uniting the best of engineering, finance, and governance to drive sustainable growth. Every venture we support reflects our belief in discipline, integrity, and purpose-driven innovation. <br />
+    Next Delta Capital stands at the intersection of technology and transformation. We invest not merely in ideas, but in ecosystems — uniting the best of engineering, finance, and governance to drive sustainable growth. Every venture we support reflects our belief in discipline, integrity, and purpose-driven innovation. <br />
     <br />
     Our goal is not just to fund progress but to engineer it — to help build a resilient digital Africa capable of competing on the world stage. Together with our partners, we are shaping a new generation of enterprises that deliver measurable impact, unlock inclusive opportunity, and strengthen Africa’s position in the global economy. <br />
     <br />
     <span className="font-bold">{`Richard Hlomador`}</span><br />
-    Executive Chairman, Nex Delta Capital
+    Executive Chairman, Next Delta Capital
   </p>
 </div>
 

@@ -24,7 +24,7 @@ const Contact = () => {
     {
       icon: <FaEnvelope size={24} />,
       title: "E-mail Us",
-      content: <>business@nexdeltacapital.com</>,
+      content: <>business@nextdeltacapital.com</>,
     },
     {
       icon: <FaClock size={24} />,
@@ -89,7 +89,7 @@ const Contact = () => {
               const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
               // Open mail client
-              window.location.href = `mailto:business@nexdeltacapital.com?subject=Contact from ${name}&body=From: ${name} (${email})%0D%0A%0D%0A${message}`;
+              window.location.href = `mailto:business@nextdeltacapital.com?subject=Contact from ${name}&body=From: ${name} (${email})%0D%0A%0D%0A${message}`;
 
               // Show success message
               setStatus("Your message is ready to send!");

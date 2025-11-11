@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-1">
         <img
           src="/logo.png"
-          alt="Nex Delta Capital Group"
+          alt="Next Delta Capital Group"
           className="w-40 md:w-50 object-contain"
         />
 

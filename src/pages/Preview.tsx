@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 // ✅ Main Next Delta Logo
 const NextDeltaLogo = () => (
   <img
-    src="/logo.png"
-    alt="Nex Delta Capital Group Logo"
-    className="w-40 sm:w-50 md:w-58 object-contain"
+    src="/logoo.png"
+    alt="Next Delta Capital Group Logo"
+    className="w-50 sm:w-60 md:w-68 object-contain"
   />
 );
 
@@ -39,7 +39,7 @@ const HeroCard: React.FC = () => {
 
             {/* Description */}
             <p className="text-sm sm:text-base leading-relaxed mb-8 text-gray-700 text-center sm:text-left">
-              <strong className="text-accent">Nex Delta Capital Group</strong> is a Ghanaian
+              <strong className="text-accent">Next Delta Capital Group</strong> is a Ghanaian
               investment and technology holding company powering Africa’s digital transformation.
               We build and manage the backbone infrastructure that connects nations, delivers content,
               and enables financial inclusion.
@@ -79,7 +79,7 @@ const HeroCard: React.FC = () => {
                   title: "Renewable Energy : Solar Power Solutions",
                   company: "K-NET Solar",
                   color: "#1E40AF", // same blue as K-NET
-                  desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
+                  desc: " provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
                   logo: "/k-NET-solar.png",
                   link: "https://knetgh.com",
                 },
@@ -165,7 +165,7 @@ const HeroCard: React.FC = () => {
               "Extend broadcast and OTT reach through regional collaboration.",
               "Integrate FinTech with telecom infrastructure to power digital government and enterprise payments.",
               "Support edge computing, cloud, and smart-network deployments for public and private sector clients.",
-              "Position Nex Delta Capital Group as a catalyst for Africa's digital economy.",
+              "Position Next Delta Capital Group as a catalyst for Africa's digital economy.",
             ].map((text, i) => (
               <li key={i} className="flex items-start">
                 <span className="mr-2 font-bold">•</span>
@@ -178,7 +178,7 @@ const HeroCard: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-6 sm:gap-4 mt-4 text-white">
             <div className="space-y-1 text-center sm:text-left">
               <p className="font-bold text-secondary">Richard Hlomador – Executive Chairman</p>
-              <p className="font-bold text-secondary">Nex Delta Group</p>
+              <p className="font-bold text-secondary">Next Delta Group</p>
               <p className="flex justify-center sm:justify-start items-center gap-2">
                 <FaEnvelope /> <span>rkh@knetgh.com</span>
               </p>
@@ -193,7 +193,7 @@ const HeroCard: React.FC = () => {
                   rel="noopener noreferrer"
                   className="underline"
                 >
-                  nexdeltacapital.com
+                  nextdeltacapital.com
                 </a>
               </p>
             </div>
