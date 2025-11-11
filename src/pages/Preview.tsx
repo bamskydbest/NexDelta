@@ -44,69 +44,104 @@ const HeroCard: React.FC = () => {
               We build and manage the backbone infrastructure that connects nations, delivers content,
               and enables financial inclusion.
             </p>
+
             {/* Divider */}
             <div className="border-b-1 border-secondary mb-6"></div>
 
             {/* Services */}
             <div className="space-y-6">
-             {[
-  {
-    title: "Telecom & Connectivity",
-    desc: "K-NET delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
-    logo: "/k-NET.png",
-    link: "https://knetgh.com",
-  },
-  {
-    title: "Broadcast & Media",
-    desc: "WAPS powers Ghana’s digital TV and radio distribution platforms with reliable content delivery.",
-    logo: "/waps.png",
-    link: "https://wapsgh.com",
-  },
-  {
-    title: "Fintech & Digital Banking",
-    desc: "SwiftRoute provides secure payment systems and interoperability infrastructure for digital finance.",
-    logo: "/SwiftRoute-logo.png",
-    link: "https://swiftroutegh.com",
-  },
-  {
-    title: "Renewable Energy : Solar Power Solutions",
-    desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
-    logo: "/k-NET.png",
-    link: "https://knetgh.com",
-  },
-  {
-    title: "Event, Broadcast & Studio Productions",
-    desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
-    logo: "/siliconhouse.png",
-    link: "https://siliconhousegh.com",
-  },
-].map((service, i) => (
-  <div
-    key={i}
-    className="flex flex-col sm:flex-row justify-between items-center gap-2 p-3 border-b-[0.5px] border-secondary last:border-b-0"
-  >
-    <div className="flex-1 text-center sm:text-left max-w-[70%]">
-      <h3 className="text-base font-bold text-accent">{service.title}</h3>
-      <p className="text-sm text-gray-600">{service.desc}</p>
-    </div>
+              {[
+                {
+                  title: "Telecom & Connectivity",
+                  company: "K-NET",
+                  color: "#1E40AF", // blue
+                  desc: "K-NET delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
+                  logo: "/k-NET.png",
+                  link: "https://knetgh.com",
+                },
+                {
+                  title: "Broadcast & Media",
+                  company: "WAPS",
+                  color: "#964B00", // yellow
+                  desc: "WAPS powers Ghana’s digital TV and radio distribution platforms with reliable content delivery.",
+                  logo: "/waps.png",
+                  link: "https://wapsgh.com",
+                },
+                {
+                  title: "Fintech & Digital Banking",
+                  company: "SwiftRoute",
+                  color: "#DC2626", // red
+                  desc: "SwiftRoute provides secure payment systems and interoperability infrastructure for digital finance.",
+                  logo: "/SwiftRoute-logo.png",
+                  link: "https://swiftroutegh.com",
+                },
+                {
+                  title: "Renewable Energy : Solar Power Solutions",
+                  company: "K-NET Solar",
+                  color: "#1E40AF", // same blue as K-NET
+                  desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
+                  logo: "/k-NET.png",
+                  link: "https://knetgh.com",
+                },
+                {
+                  title: "Event, Broadcast & Studio Productions",
+                  company: "Silicon House Productions",
+                  color: "#0F4EA4", // default accent blue
+                  desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
+                  logo: "/siliconhouse.png",
+                  link: "https://siliconhousegh.com",
+                },
+              ].map((service, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col sm:flex-row justify-between items-center p-3 border-b-[0.5px] border-secondary last:border-b-0"
+                >
+                  {/* Mobile logo first */}
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block sm:hidden transition-transform hover:scale-105"
+                  >
+                    <img
+                      src={service.logo}
+                      alt={service.title}
+                      className="w-32 h-32 object-contain mx-auto"
+                    />
+                  </a>
 
-    {/*  logo clickable */}
-    <a
-      href={service.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition-transform hover:scale-105"
-    >
-      <img
-        src={service.logo}
-        alt={service.title}
-        className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 
-                   max-w-[150px] max-h-[150px] object-contain flex-shrink-0"
-      />
-    </a>
-  </div>
-))}
+                  {/* Text section */}
+                  <div className="flex-1 text-center sm:text-left max-w-[70%] mt-2 sm:mt-0">
+                    <h3 className="text-lg sm:text-base font-extrabold mb-1 sm:mb-0" >
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-600">
+                      <span
+                        className="font-extrabold text-base sm:text-lg md:text-xl"
+                        style={{ color: service.color }}
+                      >
+                        {service.company}
+                      </span>{" "}
+                      {service.desc.replace(service.company, "").trim()}
+                    </p>
+                  </div>
 
+                  {/* Logo for sm+ screens */}
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden sm:block transition-transform hover:scale-105"
+                  >
+                    <img
+                      src={service.logo}
+                      alt={service.title}
+                      className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                                 max-w-[150px] max-h-[150px] object-contain flex-shrink-0"
+                    />
+                  </a>
+                </div>
+              ))}
             </div>
 
             {/* Summary */}
@@ -165,20 +200,18 @@ const HeroCard: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-         <div className="flex justify-center mt-6">
-  <button
-    onClick={() => {
-      window.scrollTo(0, 0);
-      navigate("/main");
-    }}
-    className="px-8 py-3 bg-secondary text-white font-bold rounded-full border-2 border-secondary 
-               hover:bg-transparent hover:text-secondary transition duration-300 text-base tracking-wide"
-  >
-    View Full Website
-  </button>
-</div>
-
-
+          <div className="flex justify-center mt-6">
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate("/main");
+              }}
+              className="px-8 py-3 bg-secondary text-white font-bold rounded-full border-2 border-secondary 
+                         hover:bg-transparent hover:text-secondary transition duration-300 text-base tracking-wide"
+            >
+              View Full Website
+            </button>
+          </div>
         </div>
       </div>
     </div>
