@@ -80,7 +80,7 @@ const HeroCard: React.FC = () => {
                   company: "K-NET Solar",
                   color: "#1E40AF", // same blue as K-NET
                   desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
-                  logo: "/k-NET.png",
+                  logo: "/k-NET-solar.png",
                   link: "https://knetgh.com",
                 },
                 {

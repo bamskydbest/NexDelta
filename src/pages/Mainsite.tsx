@@ -161,7 +161,7 @@ export default function Mainsite() {
         {
           title: "Renewable Energy : Solar Power Solutions",
           desc: "K-NET provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continous network uptime.",
-          logo: "/k-NET.png",
+          logo: "/k-NET-solar.png",
           link: "https://knetgh.com",
         },
           {
