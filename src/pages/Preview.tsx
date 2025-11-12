@@ -34,10 +34,8 @@ const HeroCard: React.FC = () => {
               Empowering Africa’s Digital Future
             </h2>
 
-            {/* Divider */}
             <div className="border-b-1 border-secondary mb-6"></div>
 
-            {/* Description */}
             <p className="text-sm sm:text-base leading-relaxed mb-8 text-gray-700 text-center sm:text-left">
               <strong className="text-accent">Next Delta Capital Group</strong> is a Ghanaian
               investment and technology holding company powering Africa’s digital transformation.
@@ -45,106 +43,133 @@ const HeroCard: React.FC = () => {
               and enables financial inclusion.
             </p>
 
-            {/* Divider */}
             <div className="border-b-1 border-secondary mb-6"></div>
 
-            {/* Services */}
+            {/* --- Services Section --- */}
             <div className="space-y-6">
               {[
-                {
-                  title: "Telecom & Connectivity",
-                  company: "K-NET",
-                  color: "#1E40AF", // blue
-                  desc: "K-NET delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
-                  logo: "/k-NET.png",
-                  link: "https://knetgh.com",
-                },
-                {
-                  title: "Broadcast & Media",
-                  company: "WAPS",
-                  color: "#964B00", // yellow
-                  desc: "WAPS powers Ghana’s digital TV and radio distribution platforms with reliable content delivery.",
-                  logo: "/waps.png",
-                  link: "https://wapsgh.com",
-                },
-                {
-                  title: "Fintech & Digital Banking",
-                  company: "SwiftRoute",
-                  color: "#DC2626", // red
-                  desc: "SwiftRoute provides secure payment systems and interoperability infrastructure for digital finance.",
-                  logo: "/SwiftRoute-logo.png",
-                  link: "https://swiftroutegh.com",
-                },
-                {
-                  title: "Renewable Energy : Solar Power Solutions",
-                  company: "K-NET Solar",
-                  color: "#1E40AF", // same blue as K-NET
-                  desc: " provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
-                  logo: "/k-NET-solar.png",
-                  link: "https://knetgh.com",
-                },
-                {
-                  title: "Event, Broadcast & Studio Productions",
-                  company: "Silicon House Productions",
-                  color: "#0F4EA4", // default accent blue
-                  desc: "Silicon House Productions offers professional studios, OB vans, and live broadcast support.",
-                  logo: "/siliconhouse.png",
-                  link: "https://siliconhousegh.com",
-                },
-              ].map((service, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col sm:flex-row justify-between items-center p-3 border-b-[0.5px] border-secondary last:border-b-0"
-                >
-                  {/* Mobile logo first */}
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block sm:hidden transition-transform hover:scale-105"
-                  >
-                    <img
-                      src={service.logo}
-                      alt={service.title}
-                      className="w-32 h-32 object-contain mx-auto"
-                    />
-                  </a>
+  {
+    title: "Telecom & Connectivity",
+    company: "K-NET",
+    color: "#1E40AF",
+    desc: "delivers nationwide Internet, satellite, and fibre backbone services across Ghana and beyond.",
+    logo: "/k-NET.png",
+    link: "https://knetgh.com",
+    email: "info@knetgh.com",
+  },
+  {
+    title: "Broadcast & Media",
+    company: "WAPS",
+    color: "#964B00",
+    desc: "powers Ghana’s digital TV and radio distribution platforms with reliable content delivery.",
+    logo: "/waps.png",
+    link: "https://wapsgh.com",
+    email: "info@wapsgh.com",
+  },
+  {
+    title: "Fintech & Digital Banking",
+    company: "SwiftRoute",
+    color: "#DC2626",
+    desc: "provides secure payment systems and interoperability infrastructure for digital finance.",
+    logo: "/SwiftRoute-logo.png",
+    link: "https://swiftroutegh.com",
+    email: "info@swiftroutegh.com",
+  },
+  {
+    title: "Renewable Energy : Solar Power Solutions",
+    company: "K-NET Solar",
+    color: "#1E40AF",
+    desc: "provides solar power systems for DTT, rural telephony, and mission-critical facilities. These solutions ensure reliable, off-grid energy and continuous network uptime.",
+    logo: "/k-NET-solar.png",
+    link: "https://knetgh.com",
+    email: "info@knetgh.com",
+  },
+  {
+    title: "Event, Broadcast & Studio Productions",
+    company: "Silicon House Productions",
+    color: "#0F4EA4",
+    desc: "offers professional studios, OB vans, and live broadcast support.",
+    logo: "/siliconhouse.png",
+    link: "https://siliconhousegh.com",
+    email: "business@siliconhousegh.com",
+  },
+].map((service, i) => (
+  <div
+    key={i}
+    className="flex flex-col sm:flex-row justify-between items-center p-3 border-b-[0.5px] border-secondary last:border-b-0"
+  >
+    {/* Mobile logo */}
+    <a
+      href={service.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block sm:hidden transition-transform hover:scale-105"
+    >
+      <img
+        src={service.logo}
+        alt={service.title}
+        className="w-32 h-32 object-contain mx-auto"
+      />
+    </a>
 
-                  {/* Text section */}
-                  <div className="flex-1 text-center sm:text-left max-w-[70%] mt-2 sm:mt-0">
-                    <h3 className="text-lg sm:text-base font-extrabold mb-1 sm:mb-0" >
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-gray-600">
-                      <span
-                        className="font-extrabold text-base sm:text-lg md:text-xl"
-                        style={{ color: service.color }}
-                      >
-                        {service.company}
-                      </span>{" "}
-                      {service.desc.replace(service.company, "").trim()}
-                    </p>
-                  </div>
+    {/* Text Section */}
+    <div className="flex-1 text-center sm:text-left max-w-[70%] mt-2 sm:mt-0 space-y-2">
+      <h3 className="text-lg sm:text-base font-extrabold mb-1 sm:mb-0">
+        {service.title}
+      </h3>
 
-                  {/* Logo for sm+ screens */}
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden sm:block transition-transform hover:scale-105"
-                  >
-                    <img
-                      src={service.logo}
-                      alt={service.title}
-                      className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 
-                                 max-w-[150px] max-h-[150px] object-contain flex-shrink-0"
-                    />
-                  </a>
-                </div>
-              ))}
+      <p className="text-sm text-gray-600">
+        <span
+          className="font-extrabold text-base sm:text-lg md:text-xl transition-colors duration-300"
+          style={{ color: service.color }}
+        >
+          {service.company}
+        </span>{" "}
+        {service.desc}
+      </p>
+
+      {/* Stacked Company Info */}
+      <div className="flex flex-col items-center sm:items-start space-y-1 text-sm">
+        <a
+          href={service.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 transition-colors duration-300 underline"
+          style={{ color: service.color }}
+        >
+          <FaGlobe style={{ color: service.color }} className="text-sm" />
+          {service.link.replace("https://", "")}
+        </a>
+        <a
+          href={`mailto:${service.email}`}
+          className="flex items-center gap-2 transition-colors duration-300 underline"
+          style={{ color: service.color }}
+        >
+          <FaEnvelope style={{ color: service.color }} className="text-sm" />
+          {service.email}
+        </a>
+      </div>
+    </div>
+
+    {/* Desktop Logo */}
+    <a
+      href={service.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hidden sm:block transition-transform hover:scale-105"
+    >
+      <img
+        src={service.logo}
+        alt={service.title}
+        className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44 
+                   max-w-[150px] max-h-[150px] object-contain flex-shrink-0"
+      />
+    </a>
+  </div>
+))}
+
             </div>
 
-            {/* Summary */}
             <p className="text-xs text-center mt-6 pt-4 border-t-1 border-secondary text-gray-500 italic">
               Together, these companies deliver end-to-end digital capability — from network
               to content to finance.
@@ -158,7 +183,6 @@ const HeroCard: React.FC = () => {
             AfricaCom 2025 Focus
           </h2>
 
-          {/* Focus List */}
           <ul className="space-y-3 sm:space-y-4 mb-8 text-white text-sm sm:text-base">
             {[
               "Forge partnerships with satellite, fibre, and data-centre providers to expand Africa’s digital backbone.",
@@ -199,7 +223,6 @@ const HeroCard: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA Button */}
           <div className="flex justify-center mt-6">
             <button
               onClick={() => {

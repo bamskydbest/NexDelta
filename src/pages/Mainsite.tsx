@@ -213,7 +213,8 @@ export default function Mainsite() {
             alt="Next Delta Logo"
             className="w-42 md:w-50 object-contain"
           />
-          <p className="text-sm md:text-base ml-4">
+          <p className="text-sm md:text-base ml-4
+          ">
             © {new Date().getFullYear()} Next Delta Capital Group. All rights
             reserved.
           </p>
