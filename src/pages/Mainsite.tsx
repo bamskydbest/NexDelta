@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import LeadershipSection from "../components/LeadershipSection";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 
 export default function Mainsite() {
@@ -206,20 +207,7 @@ export default function Mainsite() {
       <Contact />
 
       {/* FOOTER */}
-      <footer className="bg-primary text-gray-200 py-6">
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <img
-            src="/logoo.png"
-            alt="Next Delta Logo"
-            className="w-42 md:w-50 object-contain"
-          />
-          <p className="text-sm md:text-base ml-4
-          ">
-            © {new Date().getFullYear()} Next Delta Capital Group. All rights
-            reserved.
-          </p>
-        </div>
-      </footer>
+     <Footer/>
     </div>
   );
 }
