@@ -35,8 +35,8 @@ export default function Footer() {
           {/* Contact Section */}
           <div>
             <h4 className="font-semibold mb-3">Contact</h4>
-            <p className="text-sm text-gray-300">Email: info@nextdeltacapital.com</p>
-            <p className="text-sm text-gray-300">Phone: +233 (0) XXX XXX XXX</p>
+            <p className="text-sm text-gray-300">Email: business@nextdeltacapital.com</p>
+            <p className="text-sm text-gray-300">Phone: +233 302 769 306</p>
           </div>
         </div>
 

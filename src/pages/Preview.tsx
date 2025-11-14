@@ -227,7 +227,7 @@ const HeroCard: React.FC = () => {
             <button
               onClick={() => {
                 window.scrollTo(0, 0);
-                navigate("/main");
+                navigate("/home");
               }}
               className="px-8 py-3 bg-secondary text-white font-bold rounded-full border-2 border-secondary 
                          hover:bg-transparent hover:text-secondary transition duration-300 text-base tracking-wide"

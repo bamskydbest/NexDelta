@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
 import LeadershipSection from "../components/LeadershipSection";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
 
 
 export default function Mainsite() {
@@ -37,7 +34,6 @@ export default function Mainsite() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
 
       {/* HERO SECTION */}
       <section
@@ -204,10 +200,6 @@ export default function Mainsite() {
 
 
       <LeadershipSection />
-      <Contact />
-
-      {/* FOOTER */}
-     <Footer/>
     </div>
   );
 }
