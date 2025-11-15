@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import LeadershipSection from "../components/LeadershipSection";
 
 
 export default function Mainsite() {
@@ -199,7 +198,7 @@ export default function Mainsite() {
 </section>
 
 
-      <LeadershipSection />
+      {/* <LeadershipSection /> */}
     </div>
   );
 }

@@ -1,20 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-// const leadershipTeam = [
-//   {
-//     name: "Richard Jake Hlomador",
-//     title: "COO",
-//     photo: "/adolph.jpg",
-//     link: "https://www.linkedin.com/in/richard-j-hlomador-6669b5a6/",
-//   },
-//   {
-//     name: "Adolph Kpesese",
-//     title: "CTO",
-//     photo: "/richard-jake.jpg" ,
-//     link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/",
-//   },
-// ];
+
 
 export default function LeadershipSection() {
   const [showChairmanInfo, setShowChairmanInfo] = useState(false);
@@ -159,7 +146,7 @@ export default function LeadershipSection() {
   </motion.a>
 </div>
 
-<div className="flex flex-wrap justify-center gap-x-6 gap-y-8">
+<div className="flex flex-wrap justify-center gap-x-4 gap-y-8">
   {[
     {
       name: "Richard Jake Hlomador",
@@ -175,18 +162,25 @@ export default function LeadershipSection() {
       link: "https://www.linkedin.com/in/adolph-kpesese-b307a432/",
       flip: false,
     },
+    {
+      name: "Enoch Sekyi",
+      title: "CFO",
+      photo: "/placeholder-person.png",
+      link: "#",
+      flip: false,
+    },
   ].map((leader, i) => (
     <motion.a
       key={i}
-      href={leader.link}
-      target="_blank"
+      href={leader.link || "#"}
+      target={leader.link ? "_blank" : "_self"}
       rel="noopener noreferrer"
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
-      className="bg-light text-primary rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:bg-secondary hover:text-white transition-colors duration-300 w-full sm:w-[45%] md:w-[40%] lg:w-[35%] max-w-[385px]"
+      className="bg-light text-primary rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:bg-secondary hover:text-white transition-colors duration-300 w-full sm:w-[40%] md:w-[30%] lg:w-[28%] max-w-[385px]"
     >
       <img
-        src={leader.photo}
+        src={leader.photo || "/placeholder-person.png"}
         alt={leader.name}
         className={`w-40 h-40 rounded-full object-cover mb-4 ${leader.flip ? "scale-x-[-1]" : ""}`}
       />
@@ -195,6 +189,7 @@ export default function LeadershipSection() {
     </motion.a>
   ))}
 </div>
+
 
 
 

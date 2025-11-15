@@ -7,3 +7,7 @@
   --color-accent: #273F4F;  /* Deep slate for nav/footer */
   --color-light: #FFFFFF; /* Pure white for contrast cards */
 }
+
+marker {
+  color: var(--color-secondary);
+}
